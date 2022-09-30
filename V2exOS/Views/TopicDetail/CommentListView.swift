@@ -28,8 +28,7 @@ struct CommentListView: View {
         .foregroundColor(.secondary)
       
     } else {
-      if let commentList {
-        ForEach(commentList) { comment in
+        ForEach(commentList ?? []) { comment in
           
           Divider()
           
@@ -63,8 +62,6 @@ struct CommentListView: View {
           }
         }
       }
-    }
-    
   }
 }
 
